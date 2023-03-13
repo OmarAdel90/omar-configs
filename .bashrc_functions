@@ -1,0 +1,19 @@
+function currencyConvert() {
+	usdPrice=`wget -O - -nv -q "https://www.xe.com/currencyconverter/convert/?Amount=1&From=USD&To=EGP" | awk '{ sub(/.*"EGP":/, ""); sub(/,"ERN".*/, ""); print }' | tail -n 1` 
+	result=$1*$usdPrice
+	echo $result | bc
+	
+}
+ 
+function discountCalc() {
+	echo Enter price:
+	read price
+	echo Enter discount value:
+	read discount
+	decimalDiscount=$(bc -l <<< "scale=2; $discount/100")
+	discountValue=$(bc -l <<< "scale=2; $decimalDiscount*$price")
+	result=$(bc -l <<< "scale=2;$discountValue-$price")
+	echo $result
+
+}
+
