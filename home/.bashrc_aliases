@@ -10,5 +10,5 @@ alias root="sudo -i"
 alias psmem="ps auxf | sort -nr -k 4"
 alias pscpu="ps auxf | sort -nr -k 3"
 alias r="exec zsh"
-
+alias format="shfmt -l -w"
 
