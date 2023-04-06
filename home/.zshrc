@@ -197,7 +197,6 @@ source /home/omar/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
  fpath=(path/to/zsh-completions/src $fpath)
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 fortune -s | cowsay |lolcat
-
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
